@@ -23,9 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-6h34!&n&r9-i28o4u_jrs+)j^d6(f-@gkp@qsqwbgx+g)5eyg#"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost',
+                 '3.36.133.35',
+                 ]
 
 
 # Application definition
@@ -118,7 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
-STATIC_ROOT = '/home/ubuntu/FreshHelper/static'
+STATIC_ROOT = BASE_DIR/'static'
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR/'media'
