@@ -129,7 +129,6 @@ def product_edit(request, barcode_id):
     barcodes = Barcode.objects.get(barcode_id=barcode_id, user_id=user_id)
 
     if request.method == 'POST':
-        form = BarcodeForm(request.POST, instance=barcode)
         if form.is_valid():
             barcode = form.save(commit=False)
             barcode.user_id = user_id
