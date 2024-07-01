@@ -133,22 +133,3 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 LOGIN_REDIRECT_URL = '/'
 AUTH_USER_MODEL = 'users.UserDB'
 
-
-# HTTPS 사용을 강제합니다.
-SECURE_SSL_REDIRECT = True
-
-# Nginx가 HTTPS를 통해 전달한 요청을 Django가 인식할 수 있도록 설정합니다.
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-# HTTPS를 통해서만 세션 쿠키와 CSRF 쿠키를 전송하도록 설정합니다.
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-
-# 보안 관련 추가 설정
-SECURE_HSTS_SECONDS = 31536000  # HSTS 설정 (1년)
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
-
-# 다른 보안 설정 (필요에 따라 추가)
-SECURE_BROWSER_XSS_FILTER = True
-X_FRAME_OPTIONS = 'DENY'
